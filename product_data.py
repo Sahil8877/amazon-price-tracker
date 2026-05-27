@@ -37,8 +37,5 @@ class GetProductData:
         title = self.html_data.select_one('#productTitle')
         return title.text.strip() if title else None
 
-
-product = GetProductData("https://www.amazon.co.uk/PlayStation-PS5-Pro-5-Console/dp/B0FR94FV8J/ref=sr_1_4?_encoding=UTF8&brr=1&content-id=amzn1.sym.cc5a8121-5dd2-4b00-be77-8ccc7730d8ef&dib=eyJ2IjoiMSJ9.MyD1pCDSo5QOHiScCzOOiI0ylZAK6NBmTbtx0C-dT_0qWquwqd7TkFUe-L9hY2rdPq1set0-NjiZy_E1J_Z2OrbBtMA4ph6FmOAdQ_SSH8kIPSYKTpFB3pN2bGqZ4UCgVymp51XURSLHySJ2XfQ_HOdPZaDEfe8hTon3fbtuGrsOzfhxUCj5eFuRN2P3fwsdn28xlESVeFH0_aFXhAVqlOtStqYCuoGCsKwOk3WeF-8.MJl4e-JPQ_LdReySIuG9a_Bxp8nilu_C5BLe8Ba3QM4&dib_tag=se&pd_rd_r=685b0165-3ead-45b4-9bab-7247dddc1db6&pd_rd_w=V4sQS&pd_rd_wg=h5tjM&qid=1775768596&rd=1&s=videogames&sr=1-4")
-
-print(product.parse_item_name())
-print(product.parse_price_data())
+PRODUCT_URL = "https://www.amazon.co.uk/PlayStation-PS5-Pro-5-Console/dp/B0FR94FV8J/ref=sr_1_4?_encoding=UTF8&brr=1&content-id=amzn1.sym.cc5a8121-5dd2-4b00-be77-8ccc7730d8ef&dib=eyJ2IjoiMSJ9.MyD1pCDSo5QOHiScCzOOiI0ylZAK6NBmTbtx0C-dT_0qWquwqd7TkFUe-L9hY2rdPq1set0-NjiZy_E1J_Z2OrbBtMA4ph6FmOAdQ_SSH8kIPSYKTpFB3pN2bGqZ4UCgVymp51XURSLHySJ2XfQ_HOdPZaDEfe8hTon3fbtuGrsOzfhxUCj5eFuRN2P3fwsdn28xlESVeFH0_aFXhAVqlOtStqYCuoGCsKwOk3WeF-8.MJl4e-JPQ_LdReySIuG9a_Bxp8nilu_C5BLe8Ba3QM4&dib_tag=se&pd_rd_r=685b0165-3ead-45b4-9bab-7247dddc1db6&pd_rd_w=V4sQS&pd_rd_wg=h5tjM&qid=1775768596&rd=1&s=videogames&sr=1-4"
+product = GetProductData(PRODUCT_URL)
